@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The WOTD Engine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+
+
+        <!-- Game Box -->
+        <div class="game-box">
+            <h1>The WOTD Engine</h1>
+
+            <div class="timer-box">
+                <span id="timer">30</span>
+            </div>
+
+            <p id="definition">Loading...</p>
+            <input type="text" id="guessInput" placeholder="Enter your guess..." autocomplete="off">
+            
+            <div class="buttons">
+                <button id="submitBtn" onclick="checkAnswer()">Submit</button>
+            </div>
+
+            <p id="message"></p>
+
+            <div class="score-boxes">
+                <div class="streak-box">
+                    <p>Streak: <span id="streak">0</span></p>
+                </div>
+                <div class="tally-box">
+                    <p>Tallies: <span id="tally">0</span></p>
+                </div>
+            </div>
+
+            <button class="shop-toggle" onclick="toggleShop()">🛒 Shop</button>
+        </div>
+
+        <!-- 🛍️ Shop Panel -->
+<div class="shop-container">
+    <div class="shop-panel">
+        <h2>Shop</h2>
+
+        
+        <div class="shop-item">
+            <h3>Extra Time</h3>
+            <p>Gives you +10 seconds</p>
+            <button id="buyTimeBtn" onclick="buyExtraTime()">4 Tallies</button>
+        </div>
+
+        <div class="shop-item">
+            <h3>Hint</h3>
+            <p>Reveals the first and Penultimate</p>
+            <button id="buyHintBtn" onclick="buyHint()">2 Tallies</button>
+        </div>
+
+        <div class="shop-item">
+            <h3>Skip</h3>
+            <p>It's in the name</p>
+            <button id="buySkipBtn" onclick="buySkip()">5 Tallies</button>
+        </div>
+      
+
+        <div class="shop-item">
+            <h3>Gloom Water</h3>
+            <p>Does absolutely nothing.</p>
+            <button id="buyGloomWaterBtn" onclick="buyGloomWater()">3 Tallies</button>
+        </div>
+      
+    </div>
+</div>
+      
+
+ 
+      
+
+
+    </div>
+<!-- 🔥 MASSIVE Mode Image (Initially Hidden) -->
+<div id="massiveOverlay" class="massive-overlay"></div>
+ 
+    <script src="script.js"></script>
+</body>
+</html>
